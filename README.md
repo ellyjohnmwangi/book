@@ -1,25 +1,50 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Book Lending Library Application
 
-Things you may want to cover:
+A simple book lending library application built using Django and SQLite. This app allows users to manage books, track borrowing history, and record book returns.
 
-* Ruby version
+# Features
 
-* System dependencies
+✔️ CRUD operations for books (Create, Read, Update, Delete)
 
-* Configuration
+✔️ Track borrowing history of books
 
-* Database creation
+✔️ Borrow and return books while updating availability status
 
-* Database initialization
+✔️ Basic data validations for integrity
 
-* How to run the test suite
+✔️ Django’s built-in admin panel support
 
-* Services (job queues, cache servers, search engines, etc.)
+✔️ Includes unit tests for models
 
-* Deployment instructions
+# Installation
+Clone the repository
+```bash
+  git clone <repository-url> 
+  cd book_lending
+```
+Setup Virtual environment
 
-* ...
-# book
+```bash
+  python -m venv venv
+  source venv/bin/activate #
+```
+   On Windows:
+   ```bash
+    venv\Scripts\activate
+```
+Install dependencies
+```bash
+  pip install -r requirements.txt 
+```
+Apply database migrations
+```bash
+ python manage.py migrate
+```
+Run development server
+```bash
+python manage.py runserver
+```
+
+Open your browser and go to http://127.0.0.1:8000/
+    
