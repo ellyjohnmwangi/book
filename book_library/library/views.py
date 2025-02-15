@@ -9,7 +9,7 @@ def book_list(request):
 
 def book_detail(request, book_id):
     book = get_object_or_404(Book, id=book_id)
-    return render(request, "library/book_detail.html", {"book": book})
+    return render(request, "library/book_details.html", {"book": book})
 
 def add_book(request):
     if request.method == "POST":

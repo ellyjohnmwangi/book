@@ -1,0 +1,22 @@
+<h1>Book List</h1>
+<a href="{% url 'add_book' %}">Add New Book</a>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+    {% for book in books %}
+    <tr>
+        <td><a href="{% url 'book_detail' book.id %}">{{ book.title }}</a></td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.status }}</td>
+        <td>
+            {% if book.status == "available" %}
+            <a href="{% url 'borrow_book' book.id %}">Borrow</a>
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
